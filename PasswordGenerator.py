@@ -22,24 +22,24 @@ def stsc():
 
 #Func to give info about how this works
 def how():
-    print("This programs uses the random module.")
-    print("Based on the user input, the required number of characters are taken by the computer")
-    print("These characters are arranged randomly to create a password")
+    print("->This programs uses the random module.")
+    print("->Based on the user input, the required number of characters are taken by the computer")
+    print("->These characters are arranged randomly to create a password")
     userinput()
 
 #Func to get inputs
 def userinput():
-    Alphano=int(input("Enter the number of Upper-case letters required:"))
-    alphano=int(input("Enter the number of Lower-case letters required:"))
+    alphanoUC=int(input("\nEnter the number of Upper-case letters required:"))
+    alphanoLC=int(input("Enter the number of Lower-case letters required:"))
     numbno=int(input("Enter the number of numerical characters required:"))
     splchno=int(input("Enter the number of special characters required:"))
-    pasgen(Alphano,alphano,numbno,splchno)
+    pasgen(alphanoUC,alphanoLC,numbno,splchno)
 
-def pasgen(Alphano,alphano,numbno,splchno):
+def pasgen(alphanoUC,alphanoLC,numbno,splchno):
     password=""
     i=1
     lst=[1,2,3,4]
-    totalchar=Alphano+alphano+numbno+splchno
+    totalchar=alphanoUC+alphanoLC+numbno+splchno
     while i<=totalchar:
         y=random.choice(lst)
         if y==1:
@@ -60,15 +60,15 @@ stsc()
 
 #----------Don't mind the code below----------
 # #Uppercase
-# def Alphafunc(Alphano,password,i):
-#     while i>=Alphano:
+# def Alphafunc(alphanoUC,password,i):
+#     while i>=alphanoUC:
 #         password=password+random.choice(Alpha)
 #         i=i+1
 #     return password
 
 # #Lowercase
-# def alphafunc(alphano,password,i):
-#     while i>=alphano:
+# def alphafunc(alphanoLC,password,i):
+#     while i>=alphanoLC:
 #         password=password+random.choice(alpha)
 #         i=i+1
 #     return password
@@ -88,7 +88,7 @@ stsc()
 #     return password
 
 # #Func that generates the password and displays it
-# def pasgen(Alphano,alphano,numbno,splchno,password):
+# def pasgen(alphanoUC,alphanoLC,numbno,splchno,password):
 #     lst=[1,2,3,4]
 #     y=1
 #     i=1
@@ -96,9 +96,9 @@ stsc()
 #         z=random.choice(lst)
 #         print(lst,"\n",z)
 #         if z==1:
-#             password=password+Alphafunc(Alphano,password,i)
+#             password=password+Alphafunc(alphanoUC,password,i)
 #         if z==2:
-#             password=password+alphafunc(alphano,password,i)
+#             password=password+alphafunc(alphanoLC,password,i)
 #         if z==3:
 #             password=password+numbfunc(numbno,password,i)
 #         if z==4:
