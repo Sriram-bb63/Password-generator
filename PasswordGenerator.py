@@ -22,7 +22,9 @@ def stsc():
 
 #Func to give info about how this works
 def how():
-    print("I should put something here")
+    print("This programs uses the random module.")
+    print("Based on the user input, the required number of characters are taken by the computer")
+    print("These characters are arranged randomly to create a password")
     userinput()
 
 #Func to get inputs
@@ -56,6 +58,7 @@ def pasgen(Alphano,alphano,numbno,splchno):
 print("Welcome to Password Generator")
 stsc()
 
+#----------Don't mind the code below----------
 # #Uppercase
 # def Alphafunc(Alphano,password,i):
 #     while i>=Alphano:
